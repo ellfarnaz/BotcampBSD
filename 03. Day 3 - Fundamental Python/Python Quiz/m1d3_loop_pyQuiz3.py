@@ -73,37 +73,31 @@ Rata-rata konsumsi: 2.0 liter/hari
 print("=== Pemantauan Konsumsi Air Harian ===")
 print()
 
-# Input data pengguna
 nama = input("Masukkan nama: ")
 target = float(input("Target konsumsi per hari (liter): "))
 jumlah_hari = int(input("Jumlah hari pemantauan: "))
 
 print()
 
-# Inisialisasi variabel untuk tracking
 hari = 1
 total_konsumsi = 0
 hari_valid = 0
 
-# Loop untuk setiap hari pemantauan
 while hari <= jumlah_hari:
     print(f"Hari ke-{hari}")
     konsumsi = float(input("Masukkan konsumsi air hari ini: "))
     
-    # Jika konsumsi == 0, lupa minum
     if konsumsi == 0:
         print("Hari ini kamu lupa minum, lanjut besok.")
         print()
         hari += 1
         continue
     
-    # Jika konsumsi > 5, terlalu banyak
     if konsumsi > 5:
         print("Terlalu banyak konsumsi! Program dihentikan.")
         print()
         break
     
-    # Jika konsumsi valid (antara 0 dan 5 liter)
     if konsumsi >= target:
         print("Target tercapai!")
     else:
@@ -111,12 +105,10 @@ while hari <= jumlah_hari:
     
     print()
     
-    # Akumulasi data untuk hari valid
     total_konsumsi += konsumsi
     hari_valid += 1
     hari += 1
 
-# Tampilkan summary report
 print("=== Summary Report ===")
 print(f"Nama: {nama}")
 print(f"Jumlah hari terpantau: {hari_valid}")

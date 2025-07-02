@@ -37,8 +37,7 @@ while hari_ke <= total_hari:
     # TODO: Tambahkan ke total gaji
     total_gaji = total_gaji + gaji_input
 
-    # Tambah hari ke-nya
     hari_ke = hari_ke + 1
 
 # TODO: Cetak hasil total gaji
-print(f"Total gaji yang diterima oleh {nama.title()} adalah: Rp{total_gaji}")
+print(f"Total gaji yang diterima oleh {nama} adalah: Rp{total_gaji}")
