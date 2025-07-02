@@ -1,0 +1,5 @@
+Practice Session - Wed, 02 July 2025
+- Material Review: Python Looping.
+- Introduction to VS Code Debugging Feature.
+- Python Quiz
+- QnA
