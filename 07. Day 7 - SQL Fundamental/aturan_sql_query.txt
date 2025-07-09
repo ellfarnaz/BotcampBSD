@@ -1,0 +1,37 @@
+📌 ATURAN ORDER DAN DEPENDENSI SQL QUERY
+
+1. SELECT → Wajib
+   - Menentukan kolom yang akan ditampilkan
+   - Boleh pakai alias, fungsi agregat (SUM, COUNT, dll)
+
+2. FROM → Wajib (kecuali SELECT literal tanpa tabel, misalnya SELECT 1+1)
+   - Menentukan tabel sumber data
+   - Bisa pakai JOIN
+
+3. WHERE → Opsional
+   - Menyaring baris SEBELUM pengelompokan (GROUP BY)
+   - Tidak boleh pakai fungsi agregat di sini (contoh: TIDAK BOLEH WHERE COUNT(*) > 1)
+
+4. GROUP BY → Opsional
+   - Digunakan saat ingin agregasi berdasarkan kolom tertentu
+   - Jika ada GROUP BY, kolom di SELECT HARUS fungsi agregat atau termasuk di GROUP BY
+   - HAVING hanya bisa digunakan jika ada GROUP BY
+
+5. HAVING → Opsional (tapi hanya relevan jika ada GROUP BY)
+   - Menyaring hasil SETELAH pengelompokan
+   - Boleh pakai fungsi agregat (contoh: HAVING COUNT(*) > 1)
+
+6. ORDER BY → Opsional
+   - Mengurutkan hasil akhir
+   - Tidak perlu WHERE atau GROUP BY untuk bisa pakai ORDER BY
+
+7. LIMIT → Opsional
+   - Membatasi jumlah baris hasil akhir
+   - Boleh tanpa ORDER BY, tapi hasil bisa tidak konsisten (acak)
+
+
+🛑 CATATAN PENTING:
+- HAVING tanpa GROUP BY → TIDAK ERROR, tapi hanya berguna kalau pakai fungsi agregat
+- ORDER BY tanpa WHERE, GROUP BY, atau HAVING → BOLEH
+- LIMIT bisa dipakai tanpa klausa lainnya → BOLEH
+- Tidak semua klausa wajib — tapi SELECT dan FROM biasanya harus ada
