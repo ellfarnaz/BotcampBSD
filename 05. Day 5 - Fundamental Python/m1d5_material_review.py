@@ -43,6 +43,7 @@ print("Setelah update:", siswa)
 
 # update()
 siswa.update({"nama": "Budi", "umur":19})
+
 print("Setelah update:", siswa)
 
 # --- 1.3 Menghapus Data ---
